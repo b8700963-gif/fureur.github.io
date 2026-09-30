@@ -372,7 +372,7 @@ export default function Home() {
 
                   <div className="relative h-40 w-40 overflow-hidden rounded-full border-[4px] border-[#10243e] bg-white shadow-[7px_7px_0_#10243e] sm:h-48 sm:w-48">
   <Image
-    src="/images/profile/portrait.jpg"
+    src="/images/profile/portrait-n.jpg"
     alt="王溪荣个人照片"
     fill
     priority
