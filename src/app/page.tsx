@@ -301,12 +301,12 @@ export default function Home() {
   </span>
 
   <a
-    href="mailto:fureur72@163.com"
-    className="inline-flex items-center gap-3 rounded-full border-[3px] border-[#10243e] bg-white px-6 py-3 font-black shadow-[5px_5px_0_#10243e] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
-  >
-    邮件联系
-    <span aria-hidden="true">↗</span>
-  </a>
+  href="#experience"
+  className="inline-flex items-center gap-3 rounded-full border-[3px] border-[#10243e] bg-white px-6 py-3 font-black shadow-[5px_5px_0_#10243e] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
+>
+  查看经历
+  <span aria-hidden="true">↓</span>
+</a>
 </div>
 
               <div className="mt-9 flex flex-wrap gap-3">
