@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const projectStats = [
@@ -371,6 +372,37 @@ export default function AdminOperationsProject() {
             ))}
           </div>
         </section>
+
+{/* PROJECT IMAGES */}
+<section className="mx-auto max-w-[1180px] px-5 pb-20 lg:px-8 lg:pb-28">
+  <div className="grid gap-6 md:grid-cols-2">
+    
+    <div className="relative rotate-[-1deg] overflow-hidden border-[3px] border-[#10243e] bg-white p-2 shadow-[7px_7px_0_#10243e] transition duration-300 hover:rotate-0 hover:-translate-y-1">
+      <div className="relative aspect-[4/3] overflow-hidden border-2 border-[#10243e] bg-[#dff5ff]">
+        <Image
+          src="/images/admin/ceremony.jpg"
+          alt="选调生出征仪式活动现场"
+          fill
+          sizes="(max-width: 768px) 100vw, 560px"
+          className="object-cover"
+        />
+      </div>
+    </div>
+
+    <div className="relative rotate-[1deg] overflow-hidden border-[3px] border-[#10243e] bg-white p-2 shadow-[7px_7px_0_#10243e] transition duration-300 hover:rotate-0 hover:-translate-y-1">
+      <div className="relative aspect-[4/3] overflow-hidden border-2 border-[#10243e] bg-[#dff5ff]">
+        <Image
+          src="/images/admin/alumni-event.jpg"
+          alt="校友大会会务现场"
+          fill
+          sizes="(max-width: 768px) 100vw, 560px"
+          className="object-cover"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
 
         {/* LESSONS */}
         <section className="border-y-[3px] border-[#10243e] bg-white px-5 py-20 lg:px-8 lg:py-28">

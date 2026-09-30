@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 const highlights = [
   {
@@ -369,9 +370,19 @@ export default function Home() {
                     className="absolute right-8 top-8 h-14 w-14 rotate-12 border-[3px] border-[#10243e] bg-[#ffd6df]"
                   />
 
-                  <div className="relative grid h-40 w-40 place-items-center rounded-full border-[4px] border-[#10243e] bg-white text-5xl font-black shadow-[7px_7px_0_#10243e] sm:h-48 sm:w-48 sm:text-6xl">
-                    WXR
-                  </div>
+                  <div className="relative h-40 w-40 overflow-hidden rounded-full border-[4px] border-[#10243e] bg-white shadow-[7px_7px_0_#10243e] sm:h-48 sm:w-48">
+  <Image
+    src="/images/profile/portrait.jpg"
+    alt="王溪荣个人照片"
+    fill
+    priority
+    sizes="192px"
+    className="object-cover"
+    style={{
+      objectPosition: "center center",
+    }}
+  />
+</div>
                 </div>
 
                 <div className="px-1 pb-2 pt-5">
