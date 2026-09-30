@@ -1,3 +1,4 @@
+import Link from "next/link";
 const highlights = [
   {
     value: "240名",
@@ -118,17 +119,18 @@ const experiences = [
 
 const projects = [
   {
-    number: "01",
-    category: "ADMIN OPERATIONS",
-    title: "大型活动与会务统筹",
-    role: "项目负责人 / 会务执行",
-    metric: "299名新生 · 200+人次活动",
-    description:
-      "统筹学院新生迎新和学校选调生出征仪式，从方案设计、场地布置、物料采购到现场协调和流程管控，推进多部门协作和活动落地。",
-    result:
-      "同时参与校友大会和学术年会筹备，制作近100页演示文稿及全套视听物料，并承担现场场控。",
-    tone: "bg-[#dff5ff]",
-  },
+  number: "01",
+  category: "ADMIN OPERATIONS",
+  title: "大型活动与会务统筹",
+  role: "项目负责人 / 会务执行",
+  metric: "299名新生 · 200+人次活动",
+  description:
+    "统筹学院新生迎新和学校选调生出征仪式，从方案设计、场地布置、物料采购到现场协调和流程管控，推进多部门协作和活动落地。",
+  result:
+    "同时参与校友大会和学术年会筹备，制作近100页演示文稿及全套视听物料，并承担现场场控。",
+  href: "/projects/admin-operations",
+  tone: "bg-[#dff5ff]",
+},
   {
     number: "02",
     category: "FIELD RESEARCH",
@@ -139,7 +141,8 @@ const projects = [
       "辅助团队分工、行程安排和企业对接，访谈医院、医药企业、人才服务工作站及园区管理机构，分析政策、产业创新与人才发展之间的联系。",
     result:
       "独立撰写资政建议并获得感谢信反馈，项目获院级一等奖、校级优秀调研报告三等奖及优秀团队奖。",
-    tone: "bg-[#bfeecf]",
+    href: "/projects/boao-lecheng",
+      tone: "bg-[#bfeecf]",
   },
   {
     number: "03",
@@ -151,7 +154,8 @@ const projects = [
       "负责选题把控、团队分工、节点管理和导师对接，牵头文献研究、模型构建、问卷设计、数据分析及答辩材料迭代。",
     result:
       "对300余份行业研报及10万余条网络评论进行分析，项目获得全国大学生市场调查与分析大赛国家级三等奖。",
-    tone: "bg-[#d8ceff]",
+    href: "/projects/market-research",
+      tone: "bg-[#d8ceff]",
   },
   {
     number: "04",
@@ -163,7 +167,8 @@ const projects = [
       "带领学生团队横跨福建、浙江、上海三地，围绕海上丝绸之路开展为期7天的企业访谈、案例调研和文化考察。",
     result:
       "协调团队任务、安全管理和成果产出，学生团队获校级比赛一等奖，个人获评校级优秀指导教师。",
-    tone: "bg-[#fff0a8]",
+    href: "/projects/silk-road",
+      tone: "bg-[#fff0a8]",
   },
 ];
 
@@ -222,8 +227,8 @@ export default function Home() {
             className="hidden items-center gap-6 text-sm font-bold lg:flex"
             aria-label="主导航"
           >
-            <a className="transition hover:text-[#078ac4]" href="#about">
-              核心能力
+            <a className="transition hover:text-[#078ac4]" href="/about">
+              关于我
             </a>
 
             <a className="transition hover:text-[#078ac4]" href="#experience">
@@ -605,9 +610,9 @@ export default function Home() {
           <div className="mt-12 grid gap-7 md:grid-cols-2">
             {projects.map((project) => (
               <article
-                key={project.number}
-                className={`${project.tone} group flex flex-col border-[3px] border-[#10243e] p-6 shadow-[8px_8px_0_#10243e] transition duration-300 hover:-translate-y-1 sm:p-8`}
-              >
+  key={project.number}
+  className={`${project.tone} group flex flex-col border-[3px] border-[#10243e] p-6 shadow-[8px_8px_0_#10243e] transition duration-300 hover:-translate-y-1 sm:p-8`}
+>
                 <div className="flex items-start justify-between gap-4">
                   <span className="rounded-full border-2 border-[#10243e] bg-white px-3 py-1 text-xs font-black tracking-[0.08em]">
                     {project.category}
@@ -644,6 +649,16 @@ export default function Home() {
                   <p className="mt-2 font-bold leading-7">
                     {project.result}
                   </p>
+                  <div className="mt-7">
+  <Link
+    href={project.href}
+    className="inline-flex items-center gap-2 rounded-full border-[3px] border-[#10243e] bg-[#10243e] px-5 py-2 text-sm font-black transition hover:translate-x-[2px] hover:translate-y-[2px]"
+    style={{ color: "#ffffff" }}
+  >
+    查看完整项目
+    <span aria-hidden="true">→</span>
+  </Link>
+</div>
                 </div>
               </article>
             ))}
